@@ -409,7 +409,7 @@
 			p:      ['class', 'style'],
 			pre:    ['class', 'style'],
 			s:      [],
-			section:[],
+			section:['class', 'style'], // todo 秀米插件需要添加 section 标签的白名单
 			small:  [],
 			span:   ['class', 'style'],
 			sub:    ['class', 'style'],
