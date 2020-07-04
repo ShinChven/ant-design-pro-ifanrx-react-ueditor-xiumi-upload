@@ -23,12 +23,12 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
     this.setState({
       isReady: true,
     });
-    const { dispatch } = this.props;
-    if (dispatch) {
-      dispatch({
-        type: 'user/fetchCurrent',
-      });
-    }
+    // const { dispatch } = this.props;
+    // if (dispatch) {
+    //   dispatch({
+    //     type: 'user/fetchCurrent',
+    //   });
+    // }
   }
 
   render() {
@@ -41,12 +41,13 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
       redirect: window.location.href,
     });
 
-    if ((!isLogin && loading) || !isReady) {
-      return <PageLoading />;
-    }
-    if (!isLogin && window.location.pathname !== '/user/login') {
-      return <Redirect to={`/user/login?${queryString}`} />;
-    }
+    // todo 注释掉 ant design pro 的登录限制
+    // if ((!isLogin && loading) || !isReady) {
+    //   return <PageLoading />;
+    // }
+    // if (!isLogin && window.location.pathname !== '/user/login') {
+    //   return <Redirect to={`/user/login?${queryString}`} />;
+    // }
     return children;
   }
 }

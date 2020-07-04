@@ -10,7 +10,8 @@ Ant Design 集成 UEditor 和 秀米，以及对接 FeathersJS 服务。
     - [UEditor](https://github.com/fex-team/ueditor/releases);
     - [秀米插件](https://xiumi.us/connect/ue/);
 * 后端：
-    - Express;
+    - [Express](https://expressjs.com/);
+    - [ueditor node 库](https://www.npmjs.com/package/ueditor);
 
 ## 前端
 
@@ -39,8 +40,14 @@ npm install ifanrx-react-ueditor
 
 ### 集成秀米
 
+#### 添加秀米
+
 - 参照[秀米插件文档](https://xiumi.us/connect/ue/)添加文件和配置；
 - 重载 ifanrx-react-ueditor 添加秀米插件；
+
+#### 为什么秀米可以打开，却不能把内容返回到 ueditor 上？
+
+- 请在完成之后把程序部署到 https 的域名下使用，否则会员秀米的服务端拦截。
 
 ## 后端
 
@@ -52,8 +59,9 @@ npx express-generator
 npm install
 ```
 
-** 
-
 ### 实现 ueditor 上传接口
+
+
+
 
 ### 实现鉴权
