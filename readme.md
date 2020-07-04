@@ -10,13 +10,20 @@ Ant Design 集成 UEditor 和 秀米，以及对接 FeathersJS 服务。
     - [UEditor](https://github.com/fex-team/ueditor/releases);
     - [秀米插件](https://xiumi.us/connect/ue/);
 * 后端：
-    - FeathersJS/Express;
+    - Express;
 
 ## 前端
 
 ### 创建 Ant Design Pro 工程
 
 使用 umi 创建一个 Ant Design Pro V4 / antd4 的工程即可
+
+```bash
+mkdir antd-pro && cd antd-pro
+npm create umi
+npm install
+npm start
+```
 
 ### 集成 ifanrx/react-ueditor
 
@@ -32,11 +39,20 @@ npm install ifanrx-react-ueditor
 
 ### 集成秀米
 
-### 编写前端打包部署脚本
+- 参照[秀米插件文档](https://xiumi.us/connect/ue/)添加文件和配置；
+- 重载 ifanrx-react-ueditor 添加秀米插件；
 
 ## 后端
 
-### 创建 FeathersJS 工程
+### 创建 Express 工程
+
+```bash
+mkdir server && cd server
+npx express-generator
+npm install
+```
+
+** 
 
 ### 实现 ueditor 上传接口
 
